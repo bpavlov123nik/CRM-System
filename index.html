@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+    <html>
+        <head lang="en">
+            <meta charset="UTF-8">
+            <title>CRM System</title>
+            <style>
+                .navbar{
+                    overflow: hidden;
+                    background-color: #2A88AD;
+                    font-family: Arial;
+                }
+                .navbar a{
+                    float: left;
+                    font-size: 16px;
+                    color: white;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                }
+
+                .dropdown{
+                    float: left;
+                    overflow: hidden;
+                }
+                .dropdown .dropbtn{
+                    font-size: 16px;
+                    border: none;
+                    outline: none;
+                    color: white;
+                    padding: 14px 16px;
+                    background-color: inherit;
+                }
+                .dropdown-content{
+                    display: none;
+                    position: absolute;
+                    background-color: #f9f9f9;
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                    z-index: 1;
+                }
+                .dropdown-content a{
+                    float: none;
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                    text-align: left;
+                }
+                .dropdown-content a:hover{
+                    background-color: #dddddd;
+                }
+                .dropdown:hover .dropdown-content{
+                    display: block;
+                }
+
+            </style>
+        </head>
+        <body>
+            <div class="navbar">
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">ЗЕМЛИЩА
+                    <i class="fa fa-caret-down"></i></button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="form_fill_land.html">Въвеждане на землища</a>
+                        <a href="#">Справка за землища</a>
+                    </div>
+                </div>
+            </div>
+        <script>
+            function myFunction(){
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+            window.onclick =    function(event){
+                if(!event.target.matches('.dropbtn')){
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for(i = 0; i < dropdowns.length; i++){
+                        var openDropdown = dropdowns[i];
+                        if(openDropdown.classList.contains('show')){
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
+        </body>
+    </html>

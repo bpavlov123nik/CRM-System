@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <?php include 'config.php';?>
+    <html>
+        <head lang="en">
+            <meta charset="UTF-8">
+            <title>Fill Lands</title>
+            <link href="styles.css" rel="stylesheet" type="text/css">
+        </head>
+        <body>
+            <div class="form-style-10">
+                <h1>Въвеждане на данни за землища</h1>
+                <form method="post" action="fill_land.php">
+                    <div class="section"><span>1</span>Oбласт</div>
+                    <div class="inner-wrap">
+                        <label>Въведи Област <input type="text" name="area_name"/></label>
+                    </div>
+                    <div class="section"><span>2</span>Община</div>
+                    <div class="inner-wrap">
+                        <label>Въведи Община <input type="text" name="municipal_name"/></label>
+                    </div>
+                    <div class="section"><span>3</span>Землище</div>
+                    <div class="inner-wrap">
+                        <label>Въведи землище <input type="text" name="land_name"></label>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="ЗАПАЗИ" name="save" />
+                    </div>
+                </form>
+            </div>
+        </body>
+    </html>
